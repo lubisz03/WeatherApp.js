@@ -26,7 +26,12 @@ const App = () => {
         <Header handleCityName={(city) => handleCityName(city)} />
         <Routes>
           <Route path='/' element={<Weather cityName={cityName} />} />
+          <Route
+            path='/WeatherApp.js'
+            element={<Weather cityName={cityName} />}
+          />
           <Route path='*' element={<NotFoundPage />} />
+          <Route path='/WeatherApp.js/*' element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </>
