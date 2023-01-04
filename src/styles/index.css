@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'RobotoMono';
+  src: local('RobotoMono'),
+    url('../fonts/RobotoMono-Regular.ttf') format('truetype');
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: 'RobotoMono';
+  font-size: 1.6rem;
+  background-color: #810ca8;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}

@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, useEffect, useState } from 'react';
+import {
+  NavLink,
+  Link,
+  BrowserRouter,
+  Routes,
+  Route,
+  useParams,
+} from 'react-router-dom';
+import './styles/App.css';
+import Header from './components/Header';
+import Weather from './components/Weather';
+import NotFoundPage from './components/NotFoundPage';
 
-function App() {
+const App = () => {
+  const [cityName, setCityName] = useState();
+
+  const handleCityName = (city) => {
+    setCityName(city);
+    console.log(city);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Header handleCityName={(city) => handleCityName(city)} />
+        <Routes>
+          <Route path='/' element={<Weather cityName={cityName} />} />
+          <Route path='*' element={<NotFoundPage />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
-}
+};
 
 export default App;
