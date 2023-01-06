@@ -7,9 +7,11 @@ const WeatherData = (props) => {
   return (
     <div className='weather-data'>
       <div className='weather-data--city-name'>
-        <h3>
-          {props.data?.name}, {props.data?.sys.country}
-        </h3>
+        <p>
+          <b>
+            {props.data?.name}, {props.data?.sys.country}
+          </b>
+        </p>
         <p>
           <b>
             {props.data

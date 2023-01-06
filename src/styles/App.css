@@ -94,6 +94,7 @@
     border-radius: 1em;
     padding: 1vh 1.5vw;
     width: 75vw;
+    font-size: 1.6rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -182,7 +183,6 @@
     border-bottom-right-radius: 0;
   }
 
-  .weather-data--city-name h3,
   .weather-data--city-name p {
     padding: 0 3vw;
   }
@@ -198,6 +198,7 @@
   }
 
   .weather-data--desc {
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -205,6 +206,7 @@
   }
 
   .weather-data--desc img {
+    padding: 0;
     margin: 0;
     height: fit-content;
   }
@@ -294,9 +296,8 @@
     border-bottom-right-radius: 0;
   }
 
-  .weather-data--city-name h3,
   .weather-data--city-name p {
-    font-size: 2.4rem;
+    font-size: 2rem;
     padding: 0 3vw;
   }
 
@@ -305,7 +306,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-rows: auto auto auto auto;
     grid-row-gap: 3vh;
     align-items: center;
     justify-items: center;
@@ -313,6 +314,7 @@
   }
 
   .weather-data--desc {
+    margin: 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -320,19 +322,20 @@
   }
 
   .weather-data--desc img {
+    padding: 0;
     margin: 0;
     height: fit-content;
   }
 
   .weather-data--details p:nth-of-type(odd) {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-left: 5vw;
     width: 100%;
     text-align: start;
   }
 
   .weather-data--details p:nth-of-type(even) {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-right: 5vw;
     width: 100%;
     text-align: end;
@@ -366,12 +369,12 @@
   }
 
   .weather-forecast--title h3 {
-    font-size: 2.4rem;
+    font-size: 2rem;
     padding: 0 3vw;
   }
 
   .weather-forecast--days {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     padding: 2vh 0;
     width: 100%;
     display: flex;
@@ -420,7 +423,6 @@
     border-bottom-right-radius: 0;
   }
 
-  .weather-data--city-name h3,
   .weather-data--city-name p {
     padding: 1vw;
   }
