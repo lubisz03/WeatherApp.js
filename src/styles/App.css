@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
   }
 
   .header--title {
@@ -44,6 +44,7 @@
     border-radius: 1em;
     padding: 1vh 1.5vw;
     width: 75vw;
+    font-size: 1.6rem;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -53,7 +54,7 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
   }
 
   .header--title {
@@ -94,7 +95,7 @@
     border-radius: 1em;
     padding: 1vh 1.5vw;
     width: 75vw;
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -185,6 +186,7 @@
 
   .weather-data--city-name p {
     padding: 0 3vw;
+    font-size: 1.75rem;
   }
 
   .weather-data--details {
@@ -243,8 +245,9 @@
     border-bottom-right-radius: 0;
   }
 
-  .weather-forecast--title h3 {
+  .weather-forecast--title p {
     padding: 0 3vw;
+    font-size: 1.75rem;
   }
 
   .weather-forecast--days {
@@ -328,7 +331,7 @@
   }
 
   .weather-data--details p:nth-of-type(odd) {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-left: 5vw;
     width: 100%;
     text-align: start;
@@ -368,7 +371,7 @@
     border-bottom-right-radius: 0;
   }
 
-  .weather-forecast--title h3 {
+  .weather-forecast--title p {
     font-size: 2rem;
     padding: 0 3vw;
   }
@@ -425,6 +428,7 @@
 
   .weather-data--city-name p {
     padding: 1vw;
+    font-size: 1.75rem;
   }
 
   .weather-data--details {
@@ -489,8 +493,9 @@
     border-bottom-right-radius: 0;
   }
 
-  .weather-forecast--title h3 {
+  .weather-forecast--title p {
     padding: 1vw;
+    font-size: 1.75rem;
   }
 
   .weather-forecast--days {
@@ -511,7 +516,7 @@
     flex-direction: column;
   }
 
-  .weather-forecast--day h3 {
+  .weather-forecast--day b {
     margin: 0;
   }
 }

@@ -4,7 +4,9 @@ const WeatherForecast = (props) => {
   return (
     <div className='weather-forecast'>
       <div className='weather-forecast--title'>
-        <h3>5 Days Forecast</h3>
+        <p>
+          <b>5 Days Forecast</b>
+        </p>
       </div>
       <div className='weather-forecast--days'>
         <div className='weather-forecast--day'>
