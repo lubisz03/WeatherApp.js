@@ -2,8 +2,8 @@ import React from 'react';
 import moment from 'moment/moment';
 
 const WeatherData = (props) => {
-  console.log(props.data?.name);
-  console.log(props.data ? props.data : undefined);
+  // console.log(props.data?.name);
+  // console.log(props.data ? props.data : undefined);
   return (
     <div className='weather-data'>
       <div className='weather-data--city-name'>
@@ -12,28 +12,19 @@ const WeatherData = (props) => {
             {props.data?.name}, {props.data?.sys.country}
           </b>
         </p>
-        <p>
-          <b>
-            {props.data
-              ? moment.unix(props.data.dt).format('DD.MM.YYYY')
-              : undefined}
-          </b>
-        </p>
+        <img
+          src={`http://openweathermap.org/img/w/${props.data?.weather[0].icon}.png`}
+        />
       </div>
       <div className='weather-data--details'>
         <p className='weather-data--desc'>
-          <b>
-            {props.data?.weather[0].description
-              .split(' ')
-              .map((word) => {
-                return word[0].toUpperCase() + word.substr(1);
-              })
-              .join(' ')}
-            <>&nbsp;</>|
-          </b>
-          <img
-            src={`http://openweathermap.org/img/w/${props.data?.weather[0].icon}.png`}
-          />
+          <b>Description: </b>
+          {props.data?.weather[0].description
+            .split(' ')
+            .map((word) => {
+              return word[0].toUpperCase() + word.substr(1);
+            })
+            .join(' ')}
         </p>
         <p className='weather-data--temp'>
           <b>Temperature: </b>

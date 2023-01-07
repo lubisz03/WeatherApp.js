@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import ReactLoading from 'react-loading';
 import WeatherData from './WeatherData';
 import WeatherForecast from './WeatherForecast';
+import moment from 'moment';
 
 const Weather = (props) => {
   const REACT_APP_API_URL = 'https://api.openweathermap.org/data/2.5';
@@ -12,6 +13,7 @@ const Weather = (props) => {
   const [lat, setLat] = useState();
   const [lon, setLon] = useState();
   const [data, setData] = useState();
+  const [foreData, setForeData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isLocation, setIsLocation] = useState(true);
 
@@ -50,6 +52,22 @@ const Weather = (props) => {
       )
         .then((res) => res.json())
         .then((data) => setData(data));
+
+      await fetch(
+        `${REACT_APP_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${REACT_APP_API_KEY}`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          data.list.map((item, idx) => {
+            if (
+              idx >= 4 &&
+              Number(moment.unix(item.dt).format('HH')) > 12 &&
+              Number(moment.unix(item.dt).format('HH')) < 15
+            ) {
+              setForeData((prevState) => [...prevState, item]);
+            }
+          });
+        });
     }
   }
 
@@ -64,7 +82,7 @@ const Weather = (props) => {
       ) : data != undefined ? (
         <>
           <WeatherData data={data} />
-          <WeatherForecast data={data} />
+          <WeatherForecast data={foreData} />
         </>
       ) : (
         <h1>Enter Valid City Name</h1>
