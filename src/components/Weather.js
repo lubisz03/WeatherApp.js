@@ -59,16 +59,17 @@ const Weather = (props) => {
       )
         .then((res) => res.json())
         .then((data) => {
-          // setForeData(undefined);
           const time = data.city.timezone;
           setTimeZoneFore(time);
+          let list = [];
           data.list.map((item, idx) => {
             if (
               idx >= 4 &&
               Number(moment.unix(item.dt + time).format('HH')) > 12 &&
               Number(moment.unix(item.dt + time).format('HH')) < 15
             ) {
-              setForeData((prevData) => [...prevData, item]);
+              list.push(item);
+              setForeData([...list]);
             }
           });
         });
