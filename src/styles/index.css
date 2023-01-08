@@ -26,6 +26,10 @@ body {
   padding: 0;
 }
 
+input {
+  font-family: 'RobotoMono';
+}
+
 button {
   cursor: pointer;
 }

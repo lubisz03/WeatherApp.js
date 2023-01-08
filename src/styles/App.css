@@ -156,6 +156,32 @@
   width: 100vw;
 }
 
+.weather h1 {
+  position: absolute;
+  margin: auto;
+  text-align: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather--loading {
+  position: absolute;
+  margin: auto;
+  text-align: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 767px) {
   .weather-data {
     width: 95%;
@@ -261,7 +287,7 @@
   }
 
   .weather-forecast--day p {
-    margin: 0;
+    margin: 0.75vh 0 0.25vh;
   }
 }
 
@@ -390,7 +416,7 @@
   }
 
   .weather-forecast--day p {
-    margin: 0;
+    margin: 0.75vh 0 0.25vh;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -506,6 +532,6 @@
   }
 
   .weather-forecast--day p {
-    margin: 0;
+    margin: 1vh 0 0.5vh;
   }
 }

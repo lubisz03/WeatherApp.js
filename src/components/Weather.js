@@ -75,11 +75,15 @@ const Weather = (props) => {
     <div className='weather'>
       {isLoading ? (
         isLocation || props.cityName != undefined ? (
-          <ReactLoading color={'#2d033b'} type={'spin'} />
+          <ReactLoading
+            color={'#2d033b'}
+            type={'spin'}
+            className='weather--loading'
+          />
         ) : (
           <h1>Enter Valid City Name</h1>
         )
-      ) : data != undefined ? (
+      ) : data != undefined && foreData != undefined ? (
         <>
           <WeatherData data={data} />
           <WeatherForecast data={foreData} />

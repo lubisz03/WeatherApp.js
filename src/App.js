@@ -10,7 +10,6 @@ import {
 import './styles/App.css';
 import Header from './components/Header';
 import Weather from './components/Weather';
-import NotFoundPage from './components/NotFoundPage';
 
 const App = () => {
   const [cityName, setCityName] = useState();
@@ -30,8 +29,6 @@ const App = () => {
             path='/WeatherApp.js'
             element={<Weather cityName={cityName} />}
           />
-          <Route path='*' element={<NotFoundPage />} />
-          <Route path='/WeatherApp.js/*' element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </>
