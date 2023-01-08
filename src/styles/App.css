@@ -267,6 +267,7 @@
   }
 
   .weather-forecast--days {
+    font-size: 1.75rem;
     padding: 3vh 0;
     width: 100%;
     display: flex;
@@ -277,7 +278,6 @@
   }
 
   .weather-forecast--day {
-    font-size: 1.6rem;
     margin: 1em 0;
     display: flex;
     justify-content: center;
@@ -387,6 +387,7 @@
   }
 
   .weather-forecast--days {
+    font-size: 2rem;
     padding: 2vh 0;
     width: 100%;
     display: flex;
@@ -397,7 +398,6 @@
   }
 
   .weather-forecast--day {
-    font-size: 1.75rem;
     margin: 1em 0;
     display: flex;
     justify-content: center;
@@ -504,7 +504,7 @@
   }
 
   .weather-forecast--days {
-    font-size: 1.75rem;
+    font-size: 2rem;
     padding: 1vh 0;
     width: 100%;
     display: flex;
