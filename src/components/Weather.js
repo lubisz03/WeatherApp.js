@@ -72,6 +72,7 @@ const Weather = (props) => {
               setForeData([...list]);
             }
           });
+          list = [];
         });
     }
   }
