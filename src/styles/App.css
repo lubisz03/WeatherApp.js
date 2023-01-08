@@ -10,7 +10,7 @@
 
   .header--title {
     margin: 1.6rem;
-    color: #2d033b;
+    color: #2e9cca;
     margin-bottom: 3vh;
   }
 
@@ -29,7 +29,7 @@
   }
 
   .header--search .icon {
-    color: #2d033b;
+    color: #2e9cca;
     font-size: 2.4rem;
   }
 
@@ -39,7 +39,7 @@
 
   .header--search input {
     margin: 0;
-    border: 3px solid #2d033b;
+    border: 3px solid #2e9cca;
     outline: none;
     border-radius: 1em;
     padding: 1vh 1.5vw;
@@ -59,7 +59,7 @@
 
   .header--title {
     margin: 1.6rem;
-    color: #2d033b;
+    color: #2e9cca;
     margin-bottom: 3vh;
   }
 
@@ -79,7 +79,7 @@
   }
 
   .header--search .icon {
-    color: #2d033b;
+    color: #2e9cca;
     font-size: 3.2rem;
   }
 
@@ -90,7 +90,7 @@
 
   .header--search input {
     margin: 0;
-    border: 3px solid #2d033b;
+    border: 3px solid #2e9cca;
     outline: none;
     border-radius: 1em;
     padding: 1vh 1.5vw;
@@ -110,7 +110,7 @@
 
   .header--title {
     margin: 1.6rem;
-    color: #2d033b;
+    color: #2e9cca;
   }
 
   .header--search {
@@ -129,7 +129,7 @@
   }
 
   .header--search .icon {
-    color: #2d033b;
+    color: #2e9cca;
     font-size: 2.4rem;
   }
 
@@ -140,7 +140,7 @@
 
   .header--search input {
     margin: 0;
-    border: 3px solid #2d033b;
+    border: 3px solid #2e9cca;
     outline: none;
     border-radius: 1em;
     padding: 1vh 0.5vw;
@@ -157,29 +157,26 @@
 }
 
 .weather h1 {
-  position: absolute;
-  margin: auto;
-  text-align: center;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  color: #2e9cca;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .weather--loading {
   position: absolute;
-  margin: auto;
-  text-align: center;
-  top: 0;
   left: 0;
-  bottom: 0;
   right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 @media screen and (max-width: 767px) {
@@ -189,15 +186,15 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    background-color: #2d033b;
+    background-color: #464866;
     border-radius: 1em;
     margin-bottom: 5vh;
-    box-shadow: 0 0.5vh 1em #e5b8f4;
+    box-shadow: 0 0.5vh 1em #29648a;
   }
 
   .weather-data--city-name {
-    background-color: #c147e9;
-    color: #2d033b;
+    background-color: #2e9cca;
+    color: #464866;
     margin: 0;
     width: 100%;
     height: 7.5vh;
@@ -222,7 +219,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #c147e9;
+    color: #2e9cca;
   }
 
   .weather-data--city-name img {
@@ -242,15 +239,15 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    background-color: #2d033b;
+    background-color: #464866;
     border-radius: 1em;
     margin-bottom: 5vh;
-    box-shadow: 0 0.5vh 1em #e5b8f4;
+    box-shadow: 0 0.5vh 1em #29648a;
   }
 
   .weather-forecast--title {
-    background-color: #c147e9;
-    color: #2d033b;
+    background-color: #2e9cca;
+    color: #464866;
     margin: 0;
     width: 100%;
     height: 7.5vh;
@@ -275,7 +272,7 @@
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    color: #c147e9;
+    color: #2e9cca;
   }
 
   .weather-forecast--day {
@@ -298,15 +295,15 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    background-color: #2d033b;
+    background-color: #464866;
     border-radius: 1em;
     margin-bottom: 5vh;
-    box-shadow: 0 0.5vh 1em #e5b8f4;
+    box-shadow: 0 0.5vh 1em #29648a;
   }
 
   .weather-data--city-name {
-    background-color: #c147e9;
-    color: #2d033b;
+    background-color: #2e9cca;
+    color: #464866;
     margin: 0;
     width: 100%;
     padding: 0 2vw;
@@ -333,7 +330,7 @@
     grid-row-gap: 3vh;
     align-items: center;
     justify-items: center;
-    color: #c147e9;
+    color: #2e9cca;
   }
 
   .weather-data--desc {
@@ -370,15 +367,15 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    background-color: #2d033b;
+    background-color: #464866;
     border-radius: 1em;
     margin-bottom: 5vh;
-    box-shadow: 0 0.5vh 1em #e5b8f4;
+    box-shadow: 0 0.5vh 1em #29648a;
   }
 
   .weather-forecast--title {
-    background-color: #c147e9;
-    color: #2d033b;
+    background-color: #2e9cca;
+    color: #464866;
     margin: 0;
     width: 100%;
     height: 5vh;
@@ -404,7 +401,7 @@
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    color: #c147e9;
+    color: #2e9cca;
   }
 
   .weather-forecast--day {
@@ -426,15 +423,15 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    background-color: #2d033b;
+    background-color: #464866;
     border-radius: 1em;
     margin-bottom: 5vh;
-    box-shadow: 0 0.5vh 1em #e5b8f4;
+    box-shadow: 0 0.5vh 1em #29648a;
   }
 
   .weather-data--city-name {
-    background-color: #c147e9;
-    color: #2d033b;
+    background-color: #2e9cca;
+    color: #464866;
     margin: 0;
     padding: 0 1vw;
     width: 100%;
@@ -460,7 +457,7 @@
     grid-template-rows: 25% 25% 25% 25%;
     align-items: center;
     justify-items: center;
-    color: #c147e9;
+    color: #2e9cca;
   }
 
   .weather-data--city-name img {
@@ -486,15 +483,15 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    background-color: #2d033b;
+    background-color: #464866;
     border-radius: 1em;
     margin-bottom: 5vh;
-    box-shadow: 0 0.5vh 1em #e5b8f4;
+    box-shadow: 0 0.5vh 1em #29648a;
   }
 
   .weather-forecast--title {
-    background-color: #c147e9;
-    color: #2d033b;
+    background-color: #2e9cca;
+    color: #464866;
     margin: 0;
     width: 100%;
     height: 5vh;
@@ -519,7 +516,7 @@
     flex-direction: row;
     align-items: center;
     justify-items: center;
-    color: #c147e9;
+    color: #2e9cca;
   }
 
   .weather-forecast--day {

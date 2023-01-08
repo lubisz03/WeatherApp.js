@@ -13,6 +13,7 @@ const Weather = (props) => {
   const [lat, setLat] = useState();
   const [lon, setLon] = useState();
   const [data, setData] = useState();
+  const [timeZoneFore, setTimeZoneFore] = useState();
   const [foreData, setForeData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isLocation, setIsLocation] = useState(true);
@@ -58,13 +59,16 @@ const Weather = (props) => {
       )
         .then((res) => res.json())
         .then((data) => {
+          // setForeData(undefined);
+          const time = data.city.timezone;
+          setTimeZoneFore(time);
           data.list.map((item, idx) => {
             if (
               idx >= 4 &&
-              Number(moment.unix(item.dt).format('HH')) > 12 &&
-              Number(moment.unix(item.dt).format('HH')) < 15
+              Number(moment.unix(item.dt + time).format('HH')) > 12 &&
+              Number(moment.unix(item.dt + time).format('HH')) < 15
             ) {
-              setForeData((prevState) => [...prevState, item]);
+              setForeData((prevData) => [...prevData, item]);
             }
           });
         });
@@ -76,7 +80,7 @@ const Weather = (props) => {
       {isLoading ? (
         isLocation || props.cityName != undefined ? (
           <ReactLoading
-            color={'#2d033b'}
+            color={'#2E9CCA'}
             type={'spin'}
             className='weather--loading'
           />
@@ -86,7 +90,7 @@ const Weather = (props) => {
       ) : data != undefined && foreData != undefined ? (
         <>
           <WeatherData data={data} />
-          <WeatherForecast data={foreData} />
+          <WeatherForecast data={foreData} timeZone={timeZoneFore} />
         </>
       ) : (
         <h1>Enter Valid City Name</h1>

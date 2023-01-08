@@ -17,46 +17,51 @@ const WeatherForecast = (props) => {
             {String.fromCodePoint(176)}
           </p>
           <img
+            alt='weather icon'
             src={`http://openweathermap.org/img/w/${props.data[0].weather[0].icon}.png`}
           />
         </div>
         <div className='weather-forecast--day'>
-          <b>{moment.unix(props.data[1].dt).format('dddd')}</b>
+          <b>{moment.unix(props.data[1].dt + props.timeZone).format('dddd')}</b>
           <p>
             {(props.data[1].main.temp - 273.15).toFixed(0)}
             {String.fromCodePoint(176)}
           </p>
           <img
+            alt='weather icon'
             src={`http://openweathermap.org/img/w/${props.data[1].weather[0].icon}.png`}
           />
         </div>
         <div className='weather-forecast--day'>
-          <b>{moment.unix(props.data[2].dt).format('dddd')}</b>
+          <b>{moment.unix(props.data[2].dt + props.timeZone).format('dddd')}</b>
           <p>
             {(props.data[2].main.temp - 273.15).toFixed(0)}
             {String.fromCodePoint(176)}
           </p>
           <img
+            alt='weather icon'
             src={`http://openweathermap.org/img/w/${props.data[2].weather[0].icon}.png`}
           />
         </div>
         <div className='weather-forecast--day'>
-          <b>{moment.unix(props.data[3].dt).format('dddd')}</b>
+          <b>{moment.unix(props.data[3].dt + props.timeZone).format('dddd')}</b>
           <p>
             {(props.data[3].main.temp - 273.15).toFixed(0)}
             {String.fromCodePoint(176)}
           </p>
           <img
+            alt='weather icon'
             src={`http://openweathermap.org/img/w/${props.data[3].weather[0].icon}.png`}
           />
         </div>
         <div className='weather-forecast--day'>
-          <b>{moment.unix(props.data[4].dt).format('dddd')}</b>
+          <b>{moment.unix(props.data[4].dt + props.timeZone).format('dddd')}</b>
           <p>
             {(props.data[4].main.temp - 273.15).toFixed(0)}
             {String.fromCodePoint(176)}
           </p>
           <img
+            alt='weather icon'
             src={`http://openweathermap.org/img/w/${props.data[4].weather[0].icon}.png`}
           />
         </div>

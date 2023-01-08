@@ -13,6 +13,7 @@ const WeatherData = (props) => {
           </b>
         </p>
         <img
+          alt='weather icon'
           src={`http://openweathermap.org/img/w/${props.data?.weather[0].icon}.png`}
         />
       </div>
@@ -50,13 +51,17 @@ const WeatherData = (props) => {
         <p className='weather-data--sunrise'>
           <b>Sunrise: </b>
           {props.data
-            ? moment.unix(props.data.sys.sunrise).format('HH:mm')
+            ? moment
+                .unix(props.data.sys.sunrise + props.data.timezone)
+                .format('HH:mm')
             : undefined}
         </p>
         <p className='weather-data--sunset'>
           <b>Sunset: </b>
           {props.data
-            ? moment.unix(props.data.sys.sunset).format('HH:mm')
+            ? moment
+                .unix(props.data.sys.sunset + props.data.timezone)
+                .format('HH:mm')
             : undefined}
         </p>
       </div>
