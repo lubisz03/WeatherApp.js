@@ -13,7 +13,7 @@
       "sizes": "900x900"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://lubisz03.github.io/WeatherApp.js",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
