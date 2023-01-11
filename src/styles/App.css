@@ -158,16 +158,11 @@
 
 .weather h1 {
   color: #2e9cca;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
+  margin: 0;
   text-align: center;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .weather--loading {
@@ -292,7 +287,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .weather-data {
-    width: 75%;
+    width: 85%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -355,7 +350,7 @@
   }
 
   .weather-forecast {
-    width: 75%;
+    width: 85%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
