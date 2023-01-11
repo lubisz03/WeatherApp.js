@@ -10,5 +10,7 @@ This is project of fully responsive website that allows users check current weat
 ## Technologies:
 
 - HTML5/CSS3 :white_check_mark:
+- RWD :white_check_mark:
 - ReactJS :white_check_mark: 
+- React-Loading :white_check_mark:
 - [OpenWeather API](https://openweathermap.org/api) :white_check_mark: 
