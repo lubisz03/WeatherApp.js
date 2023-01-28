@@ -20,9 +20,6 @@ const Weather = (props) => {
 
   useEffect(() => {
     fetchData();
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
   }, [lat, lon, props.cityName]);
 
   async function fetchData() {
@@ -33,8 +30,16 @@ const Weather = (props) => {
       )
         .then((res) => res.json())
         .then((data) => {
-          setLat(() => data[0].lat);
-          setLon(() => data[0].lon);
+          if (JSON.stringify(data) != '[]') {
+            setLat(() => data[0].lat);
+            setLon(() => data[0].lon);
+          } else {
+            setLat(() => undefined);
+            setLon(() => undefined);
+            setIsLoading(false);
+            setData(undefined);
+            setForeData(undefined);
+          }
         });
     } else {
       navigator.geolocation.getCurrentPosition(
@@ -74,6 +79,7 @@ const Weather = (props) => {
           });
           list = [];
         });
+      setIsLoading(false);
     }
   }
 
