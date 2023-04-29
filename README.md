@@ -2,7 +2,7 @@
 
 ## About:
 
-This project is fully responsive website that allows users check current weather in details and discover 4-days forecast. The website enables users to use the current location or enter the city name they want to see data for. The purpose of the project was to train technologies know to me so far and get me more familiar with some new to me ReactJS concepts.
+This project is fully responsive website that allows users check current weather in details and discover 4-days forecast. The website enables users to use the current location or enter the city name they want to see data for. The purpose of the project was to train technologies know to me so far and get me more familiar with some ReactJS concepts.
 
 
 
